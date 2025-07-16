@@ -1,0 +1,60 @@
+.form-container-profile {
+  max-width: 800px;
+  margin: 40px auto;
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  font-family: Arial, sans-serif;
+}
+
+.form-container-profile h2 {
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
+.profile {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.profile img {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 2px solid #ddd;
+}
+
+.form-profile {
+  display: flex;
+  flex-direction: column;
+}
+
+.row-profile {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.field {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15px;
+}
+
+.form-profile label {
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.form-container-profile input,
+textarea {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  background: #f0f0f0;
+  resize: none;
+}

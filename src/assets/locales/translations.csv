@@ -1,0 +1,188 @@
+key,en,km
+hello,Hello,សួស្តី
+welcome,Welcome,សូមស្វាគមន៍
+cart,Cart,កន្ត្រក
+free_shipping,Free delivery on orders over $15,ដឹកជញ្ជូនឥតគិតថ្លៃលើការបញ្ជាទិញលើស $15   
+home,Home,ទំព័រដើម
+shop,Shop,ហាង
+all_products,All Products,ផលិតផលទាំងអស់
+men,Men,បរុស
+women,Women,ស្រ្ថី
+boys,Boys,ប្រុស
+girls,Girls,នារី
+collections,Conllections,ប្រភេទអាវ
+popular_products,Popular Products,ផលិតផលល្បីៗ
+special_products, Special Products,ផលិតផលពិសេស
+best_sellers, Best Sellters,ផលិតផលលក់ដាច់
+sale,Sale,បញ្ចុះតម្លៃ
+about_us,About Us,អំពីយើង
+
+contact,Contact,ទំនាក់ទំនង
+search,Search,ស្វែងរក
+shop_by_category, Shop by Category,ទិញតាមប្រភេទ
+shop_now, Show Now,ទិញឥឡូវនេះ
+featured_products,Featured Products,ផលិតផលពិសេស 
+new_arrivals,New Arrivals,ទំនិញថ្មី
+featured,Featured,ពិសេស
+add_to_cart,Add to Cart,ដាក់ចូលកន្ត្រក
+favorite,Favorite,ចំណូលចិត្ត
+view,View,ទស្សនៈ
+summer_sale,Summer Sale,ការលក់រដូវក្តៅ
+up to 50% off on selected items,Up to 50% off on selected items,បញ្ចុះតម្លៃរហូតដល់ ៥០% សម្រាប់ទំនិញមួយចំនួន
+new_collections,New Collections,ប្រភេទថ្មី
+check out our latest arrivals,Check out our latest arrivals,សូមមើលទំនិញមកដល់ថ្មីបំផុតរបស់យើង
+up to 50% off on selected items,Up to 50% off on selected items,បញ្ចុះតម្លៃរហូតដល់ ៥០% សម្រាប់ទំនិញមួយចំនួន
+discover,Discover,រកឃើញ
+follow_us, Follow Us,តាមដានយើងតាម
+under_follow_stay_update,Stay updated with our latest trends and products,ដើម្បីទទួលបានព័ត៌មានថ្មីៗអំពីនិន្នាការ និងផលិតផលចុងក្រោយបំផុតរបស់យើង
+products,Products,ផលិតផល
+category,Category,ប្រភេទ
+t-shirt,T-shirt,អាវយឺត
+polo_shirt,Polo Shirt,អាវប៉ូឡូ
+graphic_tees,Graphic Tees,អាវយឺតបោះពុម្ពរូបភាព
+long_sleeve,Long Sleeve,ដៃវែង
+price_range,Price Range,តម្លៃចន្លោះពី
+max_price,Max Proce,តម្លៃអតិបរមា
+color,Colors,ពណ៌ 
+size,Size,ទំហំ
+clear_all_filters,Clear all Filters,លុបទាំងអស់
+mens_shirt,Men's Shirt,អាវយឺតសម្រាប់បុរស
+womens_shirt,Women's Shirt,អាវសម្រាប់ស្រ្ដី
+boys_t-shirt,Boy's Shirt,អាវសម្រាប់ក្មេងប្រុស
+girls_t-shirt,Girls's T-shirt,អាវសម្រាប់ក្មេងស្រី
+sale up to 50% off,SALE UP TO 50% OFF,បញ្ចុះតម្លៃដល់ទៅ ៥០%
+dis-text,Limited time offer on selected items. Shop now before they're gone!,កម្មវិធីបញ្ចុះតម្លៃមានកំណត់ សម្រាប់ផលិតផលដែលបានជ្រើសរើសជាពិសេស។ កុំអោយឱកាសល្អនេះរំលងទៅទេ ទិញឥឡូវនេះ មុនពេលអស់ពីស្តុក!
+
+
+get_in_touch,Get In Touch,ទាក់ទងមក
+get-in_touch_text,We'd love to hear from you! Whether you have a question about our products need help with an order or want to collaborate with us our team is here to assist you.,យើងចង់ឮពីអ្នក! មិនថាអ្នកមានសំណួរអំពីផលិតផលរបស់យើង ត្រូវការជំនួយក្នុងការបញ្ជាទិញ ឬចង់សហការជាមួយយើងទេ ក្រុមការងាររបស់យើងនៅទីនេះដើម្បីជួយអ្នក។
+location,Location,ទីតាំង
+location_details,Location Details,វិថីកែវចិន្តា ភ្នំពេញ 12000
+phone number,Phone Number,លេខទូរស័ព្ទ
+email_address,Email Address,អាសយដ្ឋានអ៊ីមែល
+working_hours,Working Hours,ម៉ោងធ្វើការ
+monday_sunday,Monday - Sunday,ច័ន្ទ-អាទិត្យ
+send_us a message,Send Us a Message,ផ្ញើសារមកយើង
+name,Name,ឈ្មោះ
+t-shirts name,T-shirt's Name,ឈ្មោះរបស់អាវ
+message,Message,សារ
+send_message,Send Message,ផ្ញើសារ 
+map_location,Find Us On The Map,ស្វែងរកពួកយើងនៅក្នុងផែនទី
+
+footer_text_detail,We offer premium quality t-shirts for men women and kids Our products are made with the finest materials for comfort and durability,យើងផ្តល់ជូននូវអាវយឺតដែលមានគុណភាពខ្ពស់សម្រាប់បុរស ស្ត្រី និងកុមារ។ ផលិតផលរបស់ពួកយើងត្រូវបានផលិតឡើងជាមួយនឹងវត្ថុធាតុដើមល្អបំផុតសម្រាប់យុវជនសម័យថ្មី។
+customer_service,Customer Service,សេវាអតិថិជន
+contact_us,Contact Us,ទំនាក់ទំនងមកកាន់ពួកយើង
+shipping_returns, Shipping & Returns,ការដឹកជញ្ជូន និងការត្រឡប់មកវិញ
+size_guide,Size Guide,ការណែនាំអំពីទំហំ
+track_order,Track Order,តាមដានការបញ្ជាទិញ
+our_story,Our Story,ប្រវត្តិរបស់យើង
+careers,Careers,អាជីព
+sustainability,Sustainability,និរន្តរភាព
+privacy_policy,Privacy Policy,គោលការណ៍ឯកជនភាព
+Terms_Conditions,Terms & Conditions,លក្ខខណ្ឌ
+faqs,FAQs,សំណួរគេសួរញឹកញាប់
+shop_by_category,Shop By Category,ទិញទំនិញតាមប្រភេទ
+summer_t-shirt,Summer Collection 2025,អាវសម្រាប់រដូវក្ដៅ 2025
+text_for_summer_t-shirt,Discover our latest collection of premium t-shirts for the summer season,ស្វែងយល់ពីអាវយឺតដ៏ប្រណិតចុងក្រោយបំផុតរបស់យើងសម្រាប់រដូវក្តៅ
+
+specail_discount,Special Discount,បញ្ចុះតម្លៃពិសេស
+limited,Limited Time Offer,ការផ្តល់ជូនពេលវេលាមានកំណត់
+specail_discount_text,Get up to 50% off on selected items. Don't miss out on these amazing deals!,ទទួលបានការបញ្ចុះតម្លៃរហូតដល់ 50% លើទំនិញដែលបានជ្រើសរើស។ កុំខកខានការផ្តល់ជូនដ៏អស្ចារ្យទាំងនេះ!
+view_offers,View Offers,មើលការផ្តល់ជូន
+premium_quality,Premium Quality,គុណភាពពិសេស
+comfort_guaranteed,Comfort Guaranteed,ធានាផាសុកភាព
+text_detail_premium,Our t-shirts are made with the finest materials for ultimate comfort and durability.,អាវយឺតរបស់យើងត្រូវបានផលិតឡើងជាមួយនឹងវត្ថុធាតុដើមល្អបំផុតសម្រាប់ផលិតផល និងប្រើប្រាស់បានយូរបំផុត។
+learn_more,Learn More,ស្វែងយល់បន្ថែម
+
+showing,Showing ,បង្ហាញ 
+my_account,My Account,ករណីរបស់ខ្ញុំ
+
+
+battambang,Battambang,បាត់ដំបង
+stone_dark,Stone Dark,ថ្មងងឹត
+zaro_dark,Zaro Dark,ស្ទាវ ងងឹត
+samy_barang,Samy Barang,សម័យបារាំង
+lamine_yamal,Lamine Yamal,អាម៉ាល់
+khmer_empire,Khmer Empire,អាណាចក្រខ្មែរ
+steav_japan,Trust No One,​ទុកចិត្តគ្មាននរណាម្នាក់
+nobody_perfect, Nobody Perfect,គ្នាននរណាល្អ
+
+
+loading,Loading...,កំពុងដំណើរការ
+product_not_found,Product not found,មិនមែនផលិតផល
+back_to_product,Back to Products,ត្រឡប់ទៅផលិតផល
+
+description_btb,Express your style with our unique graphic print t-shirt,បង្ហាញស្ទីលរបស់អ្នកជាមួយនឹងអាវយឺតបោះពុម្ពក្រាហ្វិកតែមួយគត់របស់យើង។
+quality,Quality,ចំនួន
+in_stock,In Stock,មានស្ដុក
+out_of_stock,Out of Stock,អស់ពីស្តុក
+tags,Tags,ស្លាក
+share,Share,ចែករំលែក
+descriptionkh,Description,ការពិពណ៌នា
+additional_information,Additional Information,ពត៌មានបន្ថែម
+reviews,Reviews (3),ពិនិត្យ (3)
+100%_cotton_material,100% cotton material,សំឡី កប្បាស 
+comfortable_fit,Comfortable fit,មានផាសុកភាព
+machine_washable,Machine washable,អាចបោកម៉ាស៊ីនបាន
+imported,Imported,បាន​នាំចូល
+material,Material,ធាតុដើម
+cotton_100%,100% Cotton,កប្បាស ១០០% 
+fit,Fit, រូបរាង
+regular,Regular,ធម្មតា
+care_instructions,Care Instructions,ការណែនាំអំពីការថែទាំ
+machine_text,Machine wash cold tumble dry low,បោកម៉ាស៊ីនទឹកត្រជាក់ សម្ងួតម៉ាស៊ីនកម្តៅទាប
+origin_country,Country of Origin,ប្រទេសដើម
+
+bottom_text,You May Also Like,អ្នកប្រហែលជាចូលចិត្តវាផងដែរ
+description_Archangel,This T-shirt represents strength justice and spiritual protection. Archangel Michael is known as the fearless defender against darkness symbolizing powe bravery and divine guardianship.,អាវយឺតនេះបង្ហាញពីអង្គទេវតាមិចអែល ដែលជាអ្នកការពារប្រឆាំងអំពើអាក្រក់។ វាបញ្ជាក់ពី ភាពក្លាហាន អំណាច និងការពារ ជាចិត្តវិញ្ញាណ។ អាវនេះសមសម្រាប់អ្នកដែលជឿលើការទប់ស្កាត់អំពើអាក្រក់ និងការពារខ្លួនឯងពីអាក្រក់ ។
+description_tey,The shirt suggests that true understanding and profound truths can be found through inner reflection and intuition even in challenging or unclear situations rather than relying solely on physical sight.,អាវនេះបង្ហាញថា ការយល់ដឹងពិតប្រាកដ និងសច្ចភាពជ្រាលជ្រៅ អាចរកឃើញតាមរយៈការគិតពិចារណាផ្ទៃក្នុង និងវិចារណញាណ ទោះបីស្ថិតក្នុងស្ថានភាពលំបាក ឬមិនច្បាស់លាស់ក៏ដោយ មិនមែនពឹងផ្អែកតែលើការមើលឃើញដោយភ្នែកនោះទេ ។
+description_nang,The T-shirt's message "ACCEPT YOURSELF " promotes self-love and authenticity urging individuals to embrace all aspects of their being including strengths and flaws without comparison or judgment., "ទទួលយកខ្លួនឯង" ជំរុញឱ្យមានការស្រឡាញ់ខ្លួនឯង និងភាពស្មោះត្រង់ ដោយលើកទឹកចិត្តបុគ្គលម្នាក់ៗឱ្យទទួលយកគ្រប់ផ្នែកនៃខ្លួនឯង ទាំងចំណុចខ្លាំង និងចំណុចខ្វះខាត ដោយគ្មានការប្រៀបធៀប ឬការវិនិច្ឆ័យ ។
+description_barang,This T-shirt's meaning comes from its monochromatic urban graphic which offers a classic artistic and sophisticated visual appeal rather than a literal message. It acts as a fashion statement allowing for personal expression of style.,អត្ថន័យនៃអាវយឺតនេះគឺមកពីរូបភាពទីក្រុងបែប monochromatic ដែលផ្តល់នូវសោភ័ណភាពបែបបុរាណ សិល្បៈ និងភាពទាន់សម័យ ជាជាងសារអត្ថបទ។ វាជាការបង្ហាញម៉ូតដែលអនុញ្ញាតឱ្យមានការបញ្ចេញមតិផ្ទាល់ខ្លួន ។
+description_lamine_yamal,This T-shirt features multiple images of Lamine Yamal the young football talent. Its meaning is to express strong support admiration and fan loyalty for him as a player celebrating his talent and presence.,អាវយឺតនេះបង្ហាញរូបភាពជាច្រើនរបស់ Lamine Yamal ដែលជាកីឡាករបាល់ទាត់វ័យក្មេងដ៏មានទេពកោសល្យ។ អត្ថន័យរបស់វាគឺបង្ហាញការគាំទ្រ ការកោតសរសើរ និងភក្តីភាពយ៉ាងខ្លាំងចំពោះរូបគេក្នុងនាមជាកីឡាករ ព្រមទាំងប្រារព្ធទេពកោសល្យ និងវត្តមានរបស់គេ ។
+description_Khmer,This T-shirt's meaning is a celebration of Cambodian heritage and national pride featuring the text "Khmer Empire" and iconic historical imagery representing its rich culture.,អាវយឺតនេះគឺជាការអបអរសាទរមរតក និងមោទនភាពជាតិខ្មែរ ដោយមានអក្សរ "អាណាចក្រខ្មែរ" និងរូបភាពប្រវត្តិសាស្ត្រតំណាងវប្បធម៌ដ៏សម្បូរបែបរបស់ខ្លួន ។
+description_badPeople,The T-shirt is designed with two human faces blended together to express that no one is perfect. Every person has both flaws and a mix of good and bad traits in their character. What matters most is accepting and loving yourself unconditionally.,អាវយឺតនេះរចនាជាមួយរូបមុខមនុស្សពីរដែលបញ្ចូលគ្នា ដើម្បីបញ្ជាក់ថា មនុស្សគ្រប់រូបសុទ្ធតែមិនល្អគ្រប់១០ទេ។ មនុស្សរាល់គ្នាសុទ្ធតែមានកំហុស និងលក្ខណះល្អនិងមិនល្អរាងខ្លួន។ អ្វីដែលសំខាន់ជាងគេគឺ ការទទួលស្គាល់ និងស្រឡាញ់ខ្លួនឯងដោយមិនដាក់លក្ខខណ្ឌ ។
+description_girlJapan,This eco-friendly T-shirt combines street style with attitude. The front shows a confident Japanese-inspired character with red stars while the back boldly says “DON’T TRUST ME BRO” — a statement of independence and irony.,អាវយឺតបែបធម្មជាតិនេះមានរចនាសម័យថ្មី បែបស្ទ្រីត។ ផ្នែកមុខបង្ហាញនារីជាប្រភពវិចិត្រសិល្បៈជប៉ុនដែលអង្គុយជាមួយផ្កាយពណ៌ក្រហម បង្ហាញពីភាពទើបនិងជឿជាក់លើខ្លួន។ ផ្នែកខាងក្រោយមានពាក្យ “DON’T TRUST ME BRO” ដែលជាសារបែបកំប្លែង ឬចោទសួរអំពីការជឿទុកចិត្ត ។
+
+aboutpage_our,Our,ពួកយើង
+aboutpage_journey,Journey,ដំណើរ
+aboutpage_core,Core,ស្នូល
+aboutpage_values,Values,តម្លៃ
+aboutpage_premium_quality,Premium Quality,គុណភាពខ្ពស់
+aboutpage_sustainability,Sustainability,និរន្តរភាព
+aboutpage_creative_design,Creative Design,គំនិតឆ្នៃប្រឌិត
+aboutpage_customer_care,Customer Care,ការថែទាំអតិថិជន
+aboutpage_delivery,Fast Delivery,ការដឹកជញ្ជូនរហ័សទាន់ចិត្ត
+aboutpage_fair_pricing,Fair Pricing,តម្លៃសមរម្យ
+aboutpage_mission,Our MIssion,ហេតុផសពួកយើង
+aboutpage_qulity_first,Quality First,គុណភាពជាចម្បង
+aboutpage_global_reach,Global Reach,ការមើលទូលំទូលាយ
+aboutpage_trust_integrity,Trust & Integrity,ទំនុកចិត្ត និងសុចរិតភាព
+aboutpage_join_our_community,Join Our Community,ចួលរួមជាមួយពួកយើង
+
+aboutpage_descripton,Discover the passion and dedication behind T-Shirt Shop - your premier destination for premium quality apparel that combines style comfort and sustainability.,យើងមានចំណង់ចំណូលចិត្ត និងការប្តេជ្ញាចិត្តក្នុងការបង្កើត T-Shirt Shop ដែលជាគោលដៅចម្បងរបស់អ្នកសម្រាប់សម្លៀកបំពាក់គុណភាពល្អដែលរួមបញ្ចូលគ្នានូម៉ូដទាន់សម័យ និងនិយាយអំពីវប្បធម៍ អរិយធម៍ និងជីវភាពប្រជាជនផងដែរ។
+aboutpage_journey_description,ZARO founded in 2025 T-Shirt Shop began as a small dream to create high-quality comfortable t-shirts that people would love to wear every day. What started in a small studio has grown into a trusted brand serving customers in our country. We believe that great clothing should be accessible to everyone. That's why we've dedicated ourselves to creating premium t-shirts using the finest materials innovative designs and sustainable practices. Our commitment goes beyond just selling t-shirts - we're building a community of people who appreciate quality style and responsible fashion choices.,ZARO ត្រូវបានបង្កើតឡើងក្នុងឆ្នាំ 2025 T-Shirt Shop បានចាប់ផ្តើមពីក្តីស្រមៃតូចមួយដើម្បីបង្កើតអាវយឺតដែលមានគុណភាពខ្ពស់ ផាសុកភាព ដែលមនុស្សចូលចិត្តពាក់ជារៀងរាល់ថ្ងៃ។ អ្វីដែលបានចាប់ផ្តើមពីក្រុមតូចមួយហើយបានរីកចម្រើនក្លាយជាម៉ាកយីហោដែលគួរឱ្យទុកចិត្តបម្រើអតិថិជននៅក្នុងប្រទេស។ យើងជឿជាក់ថា សម្លៀកបំពាក់របស់យើងគួរតែអាចរកបានសម្រាប់មនុស្សគ្រប់គ្នា។ នោះហើយជាមូលហេតុដែលយើងបានលះបង់ខ្លួនឯងដើម្បីបង្កើតអាវយឺតដែលមានគុណភាពខ្ពស់ដោយប្រើប្រាស់វត្ថុធាតុដើមល្អ ការរចនាមានភាពឆ្នៃប្រឌិត និងមានភាពទាន់សម័យ។ ការប្តេជ្ញាចិត្តរបស់យើងមិនមែនត្រឹមតែលក់អាវយឺតប៉ុណ្ណោះទេ – យើងបានចូលរួមចំណែកផ្សព្វផ្សាយអំពី វប្បធម៍ អរិយធម៍និង តំបន់ទេសចរណ៍ក្នុងប្រទេសផងដែរ។
+aboutpage_descripton_premium,We use only the finest materials and employ rigorous quality control to ensure every t-shirt meets and sustainable manufacturing processes.,មិនបំផ្លាញបរិស្ថាន។ យើងប្រើប្រាស់វត្ថុធាតុដើមដែលមិនប៉ះពាល់ដល់បរិស្ថាន និងដំណើរការផលិតប្រកបដោយនិរន្តរភាព។
+aboutpage_descripton_creative_design,Our talented design team creates unique trendy designs that allow you to express your personality and style with confidence.,ក្រុមរចនាម៉ូដដែលមានទេពកោសល្យរបស់យើងបានបង្កើតនូវម៉ូដប្លែកៗ ទាន់សម័យ ដែលបង្ហាញពីបុគ្គលិកលក្ខណៈ និងស្ទីលរបស់អ្នកដោយភាពជឿជាក់។
+aboutpage_descripton_customer_care,Your satisfaction is our priority. We provide exceptional customer service and stand behind every product we sell.,ការពេញចិត្តរបស់លោកអ្នកគឺជាអាទិភាពរបស់យើង។ យើងផ្តល់ជូនសេវាកម្មអតិថិជនដ៏ល្អឥតខ្ចោះ និងធានាលើគ្រប់ផលិតផលដែលយើងលក់។
+aboutpage_descripton_fast_delivery,We understand you're excited to receive your new t-shirts. That's why we offer fast reliable shipping worldwide.,យើងដឹងថាអ្នកចង់ទទួលអាវយឺតថ្មីរបស់លោកអ្នក។ នេះហើយជាមូលហេតុដែលយើងផ្តល់ជូននូវសេវាកម្មដឹកជញ្ជូនលឿន គួរឱ្យទុកចិត្តទៅកាន់អ្នក។
+aboutpage_descripton_pricing,Quality shouldn't break the bank. We offer competitive prices without compromising on the quality you deserve.,គុណភាពមិនធ្វើឱ្យអ្នកខាតបង់ថវិកានោះទេ។ យើងផ្តល់ជូនតម្លៃប្រកួតប្រជែងមួយដែលសាកសមនឹងអាររប់ពួកយើង។
+aboutpage_descripton_mission,To create premium quality t-shirts that bring comfort style and confidence to people's everyday lives while maintaining our commitment to sustainability and ethical business practices.,ដើម្បីបង្កើតអាវយឺតដែលមានគុណភាពខ្ពស់ ដែលនាំមកនូវផាសុកភាព ស្ទីលប្លែកៗ និងភាពជឿជាក់ប្រចាំថ្ងៃ ខណៈពេលដែលរក្សាការប្តេជ្ញាចិត្តរបស់យើងចំពោះនិរន្តរភាព និងការអនុវត្តអាជីវកម្មប្រកបដោយក្រមសីលធម៌។
+aboutpage_descripton_community,Be part of our growing family of satisfied customers. Experience the difference of premium quality t-shirts designed with passion and crafted with care.,ក្លាយជាផ្នែកមួយនៃសមាជិករបស់យើងដែលកំពុងរីកចម្រើន។ ទទួលយកបទពិសោធន៍ភាពខុសប្លែកគ្នានៃអាវយឺតដែលមានគុណភាពខ្ពស់ ដែលរចនាឡើងដោយចំណង់ចំណូលចិត្ត និងបង្កើតឡើងដោយការយកចិត្តទុកដាក់។
+aboutpage_descripton_qty_first,Every product meets our strict quality standards,រាល់ផលិតផលទាំងអស់បំពេញតាមស្តង់ដារគុណភាពដ៏តឹងរ៉ឹងរបស់ពួកយើង។
+aboutpage_descripton_global_reach,Serving customers in over 50 countries worldwide,បម្រើអតិថិជននៅក្នុងប្រទេសជាង ៥០ ជុំវិញពិភពលោក។
+aboutpage_descripton_trst_integrity,Building lasting relationships with our customers,ការកសាងទំនាក់ទំនងយូរអង្វែងជាមួយអតិថិជន។
+aboutpage_descripton_joinCum,Be part of our growing family of satisfied customers. Experience the difference of premium quality t-shirts designed with passion and crafted with care.,សូមក្លាយជាផ្នែកមួយនៃក្រុមគ្រួសារអតិថិជនដែលពេញចិត្តរបស់យើងដែលកំពុងរីកចម្រើន។ សូមទទួលយកបទពិសោធន៍ភាពខុសប្លែកគ្នានៃអាវយឺតដែលមានគុណភាពខ្ពស់ ដែលរចនាឡើងដោយចំណង់ចំណូលចិត្ត និងបង្កើតឡើងដោយការយកចិត្តទុកដាក់ ។
+aboutpage_ourjourney,Our journey,ដំណើរឆ្ពោះទៅមុខរបស់យើង
+aboutpage_Our core,Our core,ស្នូលរបស់យើង 
+aboutpage_Our mission, Our Mission,ហេតុផលរបស់ពួកយើង
+aboutpage_env,Environmental responsibility is at the heart of our business. We use eco-friendly materials and sustainable manufacturing processes.,ការទទួលខុសត្រូវលើបរិស្ថាន គឺជាស្នូលនៃអាជីវកម្មរបស់យើង។ យើងប្រើប្រាស់តែវត្ថុធាតុដើមដែលមិនប៉ះពាល់ដល់បរិស្ថាន និងដំណើរការផលិតប្រកបដោយនិរន្តរភាព ។
+homepage_free delivery,Free Delivery,ដឹកជញ្ជូនឥតគិតថ្លៃ
+homepage_text_free,On all orders over $15,សម្រាប់គ្រប់ការកម្ម៉ង់ចាប់ពី ១៥ ដុល្លារឡើងទៅ
+homepage_easy return, Easy Returns,ងាយស្រួលក្នុងការបង្វិលត្រឡប់
+homepage_text_delivery,7 days return policy,គោលការណ៍បង្វិលទំនិញរយៈពេល 7 ថ្ងៃ
+homepage_support,24/7 Support,ជំនួយ 24/7
+homepage_support customer,Customer support,ការគាំទ្រអតិថិជន
+hamepage_payment,Secure Payment,ការទូទាត់ប្រាក់ប្រកបដោយសុវត្ថិភាព
+homepage_text payment,100% secure checkout,ការទូទាត់ប្រាក់ចេញ ១០០% ប្រកបដោយសុវត្ថិភាព 
+subscribe_newsletter, Subscribe Newsletter,ចុះឈ្មោះដើម្បីទទួលព័ត៌មាន
+stay_updated, Stay Updated , ទទួលព័ត៌មានថ្មីៗ

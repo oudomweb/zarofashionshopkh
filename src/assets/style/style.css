@@ -1,0 +1,14 @@
+/* .row {
+  gap: 20px 0 !important;
+} */
+.icon-card-id {
+  color: black !important;
+}
+.icon-card-id:hover {
+  cursor: pointer;
+}
+/* @media screen and (max-width: 768px) {
+  .fixed-top {
+    top: -13px;
+  }
+} */
