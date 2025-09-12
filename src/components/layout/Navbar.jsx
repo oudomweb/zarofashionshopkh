@@ -583,7 +583,7 @@ const NavbarTop = () => {
                 </Button>
               </Form>
 
-              <Link to="/wishlist" className="me-3 position-relative">
+              {/* <Link to="/wishlist" className="me-3 position-relative">
                 <FaHeart size={20} />
                 <Badge
                   bg="danger"
@@ -603,7 +603,7 @@ const NavbarTop = () => {
                 >
                   {cartCount}
                 </Badge>
-              </Link>
+              </Link> */}
 
               <Link to="/account">
                 <FaUser size={20} />
