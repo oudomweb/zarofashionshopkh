@@ -9,7 +9,7 @@ const initialState = {
 };
 
 const loadTranslations = async () => {
-  const response = await fetch('/src/assets/locales/translations.csv');
+  const response = await fetch('/translations.csv');
   const csv = await response.text();
   // console.log(csv);
   const parsed = Papa.parse(csv, { header: true });
