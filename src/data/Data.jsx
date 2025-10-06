@@ -13,7 +13,6 @@ import GirlBack from "../assets/img/girlback.png";
 import NewKhback from "../assets/img/newkhback.png";
 import French1 from "../assets/img/french.jpg";
 import French2 from "../assets/img/french2.jpg";
-import NangTk from "../assets/img/Nangfront.jpg";
 import NangBack from "../assets/img/Nangback.jpg";
 
 
@@ -85,7 +84,7 @@ export const DataProducts = [
     price: 12,
     originalPrice: 13.99,
     description: 'description_nang',
-    images: [NangTk,NangBack],
+    images: [NangBack],
     colors: ["Gray", "Navy", "Burgundy"],
     sizes: ["S", "M", "L", "XL", "XXL"],
     category: "Long Sleeve",

@@ -16,13 +16,12 @@ import Khmer from "../assets/img/khmer.png";
 import Btb from "../assets/img/btb.jpg";
 import Newkh from "../assets/img/Newkh.png";
 import Long1 from "../assets/img/long1.jpg";
-import NangFront from "../assets/img/NangFront.jpg";
 import YamalFront from "../assets/img/yamalfront.png";
 import { useTranslation } from "../store/translation.js";
 
 const HomePage = () => {
   const { language, setLanguage, t } = useTranslation();
-  const KhmerImages = [Khmer, Btb, Newkh,Long1,NangFront,YamalFront];
+  const KhmerImages = [Khmer, Btb, Newkh,Long1,YamalFront];
   const features = [
     {
       icon: <FaShippingFast size={30} />,
