@@ -25,6 +25,7 @@ const AboutUs = () => {
         </div>
       </section>
 
+
       <section className="section-padding">
         <div className="container">
           <div className="row align-items-center ">
@@ -43,7 +44,7 @@ const AboutUs = () => {
         </div>
       </section>
 
-      {/* Values Section */}
+
       <section className="section-padding bg-light-custom">
         <div className="container">
           <div className="row">
