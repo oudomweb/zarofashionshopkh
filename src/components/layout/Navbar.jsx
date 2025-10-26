@@ -461,7 +461,7 @@
 //   return (
 //     <header className={getFontClass()}>
 //       {/* Top Bar */}
-//       {/* <div className="bg-dark text-white py-2">
+//       <div className="bg-dark text-white py-2">
 //         <Container>
 //           <div className="row text-center text-md-start">
 //             <div className="col-12 col-md-4 mb-2 mb-md-0">
@@ -472,48 +472,6 @@
 //               <small className={`d-block ${getTextClass()}`}>fashionzaro@gmail.com</small>
 //             </div>
 //             <div className="col-12 col-md-4 text-md-end">
-//               <Dropdown>
-//                 <Dropdown.Toggle
-//                   variant="secondary"
-//                   size="sm"
-//                   id="dropdown-language"
-//                   className={getTextClass()}
-//                 >
-//                   {language === 'en' ? 'EN' : 'ខ្មែរ'}
-//                 </Dropdown.Toggle>
-//                 <Dropdown.Menu>
-//                   <Dropdown.Item
-//                     onClick={() => setLanguage('en')}
-//                     active={language === 'en'}
-//                     className="english-text"
-//                   >
-//                     EN
-//                   </Dropdown.Item>
-//                   <Dropdown.Item
-//                     onClick={() => setLanguage('km')}
-//                     active={language === 'km'}
-//                     className="khmer-text"
-//                   >
-//                     ខ្មែរ
-//                   </Dropdown.Item>
-//                 </Dropdown.Menu>
-//               </Dropdown>
-//             </div>
-//           </div>
-//         </Container>
-//       </div> */}
-//       {/* Top Bar - Hidden on mobile */}
-//       <div className="bg-dark text-white py-2 d-none d-md-block">
-//         <Container>
-//           <div className="d-flex justify-content-between align-items-center">
-//             <div>
-//               <small className={getTextClass()}>{t('free_shipping')}</small>
-//             </div>
-//             <div className="text-center">
-//               <small className={`me-3 ${getTextClass()}`}>+855 962 089 546</small>
-//               <small className={getTextClass()}>fashionzaro@gmail.com</small>
-//             </div>
-//             <div>
 //               <Dropdown>
 //                 <Dropdown.Toggle
 //                   variant="secondary"
@@ -661,6 +619,327 @@
 // export default NavbarTop;
 
 
+// "use client";
+
+// import { useState, useEffect } from "react";
+// import { Link, useLocation } from "react-router-dom";
+// import {
+//   Navbar,
+//   Nav,
+//   Container,
+//   NavDropdown,
+//   Form,
+//   Button,
+//   Badge,
+//   Dropdown,
+// } from "react-bootstrap";
+// import { FaSearch, FaShoppingCart, FaUser, FaHeart } from "react-icons/fa";
+// import logo from "../../assets/img/zaro.jpg";
+// import { useTranslation } from "../../store/translation";
+// import useFontManager from "./useFontManager";
+
+// const NavbarTop = () => {
+//   const [scrolled, setScrolled] = useState(false);
+//   const [cartCount] = useState(3);
+//   const [wishlistCount] = useState(2);
+//   const location = useLocation();
+//   const { language, setLanguage, t } = useTranslation();
+//   const { getFontClass, getTextClass } = useFontManager(language);
+
+//   useEffect(() => {
+//     let lastScrollY = 0;
+//     const handleScroll = () => {
+//       const currentScrollY = window.scrollY;
+//       // Add slight delay to avoid flicker
+//       if (currentScrollY > 80 && currentScrollY > lastScrollY) {
+//         setScrolled(true);
+//       } else if (currentScrollY < 50) {
+//         setScrolled(false);
+//       }
+//       lastScrollY = currentScrollY;
+//     };
+
+//     window.addEventListener("scroll", handleScroll, { passive: true });
+//     return () => window.removeEventListener("scroll", handleScroll);
+//   }, []);
+
+//   return (
+//     <header
+//       className={`fixed-top w-100 ${getFontClass()}`}
+//       style={{
+//         zIndex: 1030,
+//         transition: "all 0.4s ease",
+//         backgroundColor: scrolled ? "rgba(255,255,255,0.98)" : "white",
+//         boxShadow: scrolled ? "0 2px 10px rgba(0,0,0,0.1)" : "none",
+//         backdropFilter: scrolled ? "blur(5px)" : "none",
+//       }}
+//     >
+//       {/* Top Bar */}
+//       <div
+//         className="bg-dark text-white py-1 text-center"
+//         style={{ fontSize: "0.8rem" }}
+//       >
+//         <div>Free delivery on orders over $15</div>
+//         <div>+855 962 089 546 · fashionzaro@gmail.com</div>
+//       </div>
+
+//       {/* Main Navbar */}
+//       <Navbar expand="lg" bg="transparent" className="py-2">
+//         <Container fluid className="px-3 px-md-5">
+//           <Navbar.Brand as={Link} to="/" className={`fw-bold fs-5 ${getTextClass()}`}>
+//             <img
+//               src={logo}
+//               alt="logo"
+//               style={{ width: 40, height: 40, borderRadius: "50%" }}
+//               className="me-2"
+//             />
+//             ZARO
+//           </Navbar.Brand>
+
+//           <Navbar.Toggle
+//             aria-controls="main-navbar"
+//             className="border-0"
+//             style={{ outline: "none" }}
+//           >
+//             <span className="navbar-toggler-icon"></span>
+//           </Navbar.Toggle>
+
+//           <Navbar.Collapse id="main-navbar" className="text-center">
+//             <Nav className="mx-auto">
+//               <Nav.Link as={Link} to="/" active={location.pathname === "/"}>
+//                 {t("home")}
+//               </Nav.Link>
+//               <NavDropdown title={t("products")} id="products-dropdown">
+//                 <NavDropdown.Item as={Link} to="/products">{t("all_products")}</NavDropdown.Item>
+//                 <NavDropdown.Divider />
+//                 <NavDropdown.Item as={Link} to="/men">{t("men")}</NavDropdown.Item>
+//                 <NavDropdown.Item as={Link} to="/women">{t("women")}</NavDropdown.Item>
+//               </NavDropdown>
+//               <Nav.Link as={Link} to="/sale">{t("sale")}</Nav.Link>
+//               <Nav.Link as={Link} to="/contact">{t("contact")}</Nav.Link>
+//             </Nav>
+
+//             {/* Icons Section */}
+//             <div className="d-flex align-items-center justify-content-center gap-3 mt-3 mt-lg-0">
+//               <Link to="/wishlist" className="position-relative text-dark">
+//                 <FaHeart size={18} />
+//                 <Badge bg="danger" pill className="position-absolute top-0 start-100 translate-middle">
+//                   {wishlistCount}
+//                 </Badge>
+//               </Link>
+
+//               <Link to="/cart" className="position-relative text-dark">
+//                 <FaShoppingCart size={18} />
+//                 <Badge bg="danger" pill className="position-absolute top-0 start-100 translate-middle">
+//                   {cartCount}
+//                 </Badge>
+//               </Link>
+
+//               <Link to="/account" className="text-dark">
+//                 <FaUser size={18} />
+//               </Link>
+//             </div>
+//           </Navbar.Collapse>
+//         </Container>
+//       </Navbar>
+//     </header>
+//   );
+// };
+
+// export default NavbarTop;
+
+
+// "use client";
+
+// import { useState, useEffect } from "react";
+// import { Link, useLocation } from "react-router-dom";
+// import {
+//   Navbar,
+//   Nav,
+//   Container,
+//   NavDropdown,
+//   Form,
+//   Button,
+//   Badge,
+//   Dropdown,
+// } from "react-bootstrap";
+// import { FaSearch, FaShoppingCart, FaUser, FaHeart } from "react-icons/fa";
+// import logo from "../../assets/img/zaro.jpg";
+// import { useTranslation } from "../../store/translation";
+// import useFontManager from "./useFontManager";
+
+// const NavbarTop = () => {
+//   const [scrolled, setScrolled] = useState(false);
+//   const [cartCount] = useState(3);
+//   const [wishlistCount] = useState(2);
+//   const location = useLocation();
+//   const { language, setLanguage, t } = useTranslation();
+//   const { getFontClass, getTextClass } = useFontManager(language);
+
+//   useEffect(() => {
+//     let lastY = 0;
+//     const handleScroll = () => {
+//       const y = window.scrollY;
+//       if (y > 80 && y > lastY) {
+//         setScrolled(true);
+//       } else if (y < 50) {
+//         setScrolled(false);
+//       }
+//       lastY = y;
+//     };
+//     window.addEventListener("scroll", handleScroll, { passive: true });
+//     return () => window.removeEventListener("scroll", handleScroll);
+//   }, []);
+
+//   return (
+//     <header
+//       className={`fixed-top w-100 ${getFontClass()}`}
+//       style={{
+//         zIndex: 1030,
+//         transition: "all 0.4s ease",
+//         backgroundColor: scrolled ? "rgba(255,255,255,0.98)" : "white",
+//         boxShadow: scrolled ? "0 2px 10px rgba(0,0,0,0.1)" : "none",
+//         backdropFilter: scrolled ? "blur(6px)" : "none",
+//       }}
+//     >
+//       {/* 🔹 Top Bar */}
+//       <div
+//         className="bg-dark text-white py-1 text-center text-md-start"
+//         style={{
+//           fontSize: "0.85rem",
+//           transition: "0.3s ease",
+//         }}
+//       >
+//         <Container fluid className="px-md-5 d-flex flex-column flex-md-row justify-content-between align-items-center gap-1">
+//           <div>{t("free_shipping")}</div>
+//           <div className="d-flex flex-column flex-md-row gap-1 gap-md-3">
+//             <span>+855 962 089 546</span>
+//             <span>fashionzaro@gmail.com</span>
+//           </div>
+//           <Dropdown>
+//             <Dropdown.Toggle
+//               variant="danger"
+//               size="sm"
+//               id="dropdown-language"
+//               className="rounded-1 px-2 py-1"
+//             >
+//               {language === "en" ? "EN" : "ខ្មែរ"}
+//             </Dropdown.Toggle>
+//             <Dropdown.Menu>
+//               <Dropdown.Item
+//                 onClick={() => setLanguage("en")}
+//                 active={language === "en"}
+//                 className="english-text"
+//               >
+//                 EN
+//               </Dropdown.Item>
+//               <Dropdown.Item
+//                 onClick={() => setLanguage("km")}
+//                 active={language === "km"}
+//                 className="khmer-text"
+//               >
+//                 ខ្មែរ
+//               </Dropdown.Item>
+//             </Dropdown.Menu>
+//           </Dropdown>
+//         </Container>
+//       </div>
+
+//       {/* 🔹 Main Navbar */}
+//       <Navbar expand="lg" bg="transparent" className="py-2">
+//         <Container fluid className="px-3 px-md-5">
+//           <Navbar.Brand as={Link} to="/" className={`fw-bold fs-5 ${getTextClass()}`}>
+//             <img
+//               src={logo}
+//               alt="logo"
+//               style={{ width: 45, height: 45, borderRadius: "50%" }}
+//               className="me-2"
+//             />
+//             ZARO
+//           </Navbar.Brand>
+
+//           <Navbar.Toggle
+//             aria-controls="main-navbar"
+//             className="border-0"
+//             style={{ outline: "none" }}
+//           >
+//             <span className="navbar-toggler-icon"></span>
+//           </Navbar.Toggle>
+
+//           <Navbar.Collapse id="main-navbar" className="text-center">
+//             <Nav className="mx-auto">
+//               <Nav.Link as={Link} to="/" active={location.pathname === "/"}>
+//                 {t("home")}
+//               </Nav.Link>
+
+//               <NavDropdown title={t("products")} id="products-dropdown">
+//                 <NavDropdown.Item as={Link} to="/products">{t("all_products")}</NavDropdown.Item>
+//                 <NavDropdown.Divider />
+//                 <NavDropdown.Item as={Link} to="/men">{t("men")}</NavDropdown.Item>
+//                 <NavDropdown.Item as={Link} to="/women">{t("women")}</NavDropdown.Item>
+//                 <NavDropdown.Item as={Link} to="/boys">{t("boys")}</NavDropdown.Item>
+//                 <NavDropdown.Item as={Link} to="/girls">{t("girls")}</NavDropdown.Item>
+//               </NavDropdown>
+
+//               <NavDropdown title={t("collections")} id="collections-dropdown">
+//                 <NavDropdown.Item as={Link} to="/popular">{t("popular_products")}</NavDropdown.Item>
+//                 <NavDropdown.Item as={Link} to="/special">{t("special_products")}</NavDropdown.Item>
+//                 <NavDropdown.Item as={Link} to="/best">{t("best_sellers")}</NavDropdown.Item>
+//               </NavDropdown>
+
+//               <Nav.Link as={Link} to="/discounts">{t("sale")}</Nav.Link>
+//               <Nav.Link as={Link} to="/about-us">{t("about_us")}</Nav.Link>
+//               <Nav.Link as={Link} to="/contact">{t("contact")}</Nav.Link>
+//             </Nav>
+
+//             {/* 🔹 Icons Section */}
+//             <div className="d-flex align-items-center justify-content-center gap-3 mt-3 mt-lg-0">
+//               <Form className="d-flex me-2">
+//                 <Form.Control
+//                   type="search"
+//                   placeholder={t("search")}
+//                   className="me-2"
+//                   aria-label="Search"
+//                 />
+//                 <Button variant="outline-dark">
+//                   <FaSearch />
+//                 </Button>
+//               </Form>
+
+//               <Link to="/wishlist" className="position-relative text-dark">
+//                 <FaHeart size={18} />
+//                 <Badge
+//                   bg="danger"
+//                   pill
+//                   className="position-absolute top-0 start-100 translate-middle"
+//                 >
+//                   {wishlistCount}
+//                 </Badge>
+//               </Link>
+
+//               <Link to="/cart" className="position-relative text-dark">
+//                 <FaShoppingCart size={18} />
+//                 <Badge
+//                   bg="danger"
+//                   pill
+//                   className="position-absolute top-0 start-100 translate-middle"
+//                 >
+//                   {cartCount}
+//                 </Badge>
+//               </Link>
+
+//               <Link to="/account" className="text-dark">
+//                 <FaUser size={18} />
+//               </Link>
+//             </div>
+//           </Navbar.Collapse>
+//         </Container>
+//       </Navbar>
+//     </header>
+//   );
+// };
+
+// export default NavbarTop;
 "use client";
 
 import { useState, useEffect } from "react";
@@ -672,284 +951,249 @@ import {
   NavDropdown,
   Form,
   Button,
+  Badge,
   Dropdown,
+  // 💡 NEW: Import Offcanvas for the side menu
   Offcanvas,
 } from "react-bootstrap";
-import { FaSearch, FaUser, FaBars } from "react-icons/fa";
+// Note: FaBars is used for the Offcanvas toggle button
+import { FaSearch, FaShoppingCart, FaUser, FaHeart, FaBars } from "react-icons/fa"; 
 import logo from "../../assets/img/zaro.jpg";
-import { useTranslation } from '../../store/translation';
+import { useTranslation } from "../../store/translation";
 import useFontManager from "./useFontManager";
 
 const NavbarTop = () => {
-  const [show, setShow] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+  // 💡 NEW: State for controlling the Offcanvas visibility
+  const [showOffcanvas, setShowOffcanvas] = useState(false); 
+  const [cartCount] = useState(3);
+  const [wishlistCount] = useState(2);
   const location = useLocation();
   const { language, setLanguage, t } = useTranslation();
-
   const { getFontClass, getTextClass } = useFontManager(language);
 
-  const handleClose = () => setShow(false);
-  const handleShow = () => setShow(true);
+  const handleCloseOffcanvas = () => setShowOffcanvas(false);
+  const handleShowOffcanvas = () => setShowOffcanvas(true);
+
+  // Scroll effect for fixed header styling
+  useEffect(() => {
+    let lastY = 0;
+    const handleScroll = () => {
+      const y = window.scrollY;
+      if (y > 80) {
+        setScrolled(true);
+      } else if (y < 50) {
+        setScrolled(false);
+      }
+      lastY = y;
+    };
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  // Function for the navigation items (used for both desktop Nav and Offcanvas)
+  const NavLinks = () => (
+    <>
+      <Nav.Link 
+        as={Link} 
+        to="/" 
+        active={location.pathname === "/"} 
+        className={getTextClass()}
+        onClick={handleCloseOffcanvas} // Close on click
+      >
+        {t("home")}
+      </Nav.Link>
+
+      <NavDropdown 
+        title={t("products")} 
+        id="products-dropdown" 
+        className={getTextClass()}
+      >
+        {/* Note: Dropdown items should also close the offcanvas if inside it */}
+        <NavDropdown.Item as={Link} to="/products" className={getTextClass()} onClick={handleCloseOffcanvas}>{t("all_products")}</NavDropdown.Item>
+        <NavDropdown.Divider />
+        <NavDropdown.Item as={Link} to="/men" className={getTextClass()} onClick={handleCloseOffcanvas}>{t("men")}</NavDropdown.Item>
+        <NavDropdown.Item as={Link} to="/women" className={getTextClass()} onClick={handleCloseOffcanvas}>{t("women")}</NavDropdown.Item>
+        <NavDropdown.Item as={Link} to="/boys" className={getTextClass()} onClick={handleCloseOffcanvas}>{t("boys")}</NavDropdown.Item>
+        <NavDropdown.Item as={Link} to="/girls" className={getTextClass()} onClick={handleCloseOffcanvas}>{t("girls")}</NavDropdown.Item>
+      </NavDropdown>
+
+      <NavDropdown 
+        title={t("collections")} 
+        id="collections-dropdown" 
+        className={getTextClass()}
+      >
+        <NavDropdown.Item as={Link} to="/popular" className={getTextClass()} onClick={handleCloseOffcanvas}>{t("popular_products")}</NavDropdown.Item>
+        <NavDropdown.Item as={Link} to="/special" className={getTextClass()} onClick={handleCloseOffcanvas}>{t("special_products")}</NavDropdown.Item>
+        <NavDropdown.Item as={Link} to="/best" className={getTextClass()} onClick={handleCloseOffcanvas}>{t("best_sellers")}</NavDropdown.Item>
+      </NavDropdown>
+
+      <Nav.Link as={Link} to="/sale" className={getTextClass()} onClick={handleCloseOffcanvas}>{t("sale")}</Nav.Link>
+      <Nav.Link as={Link} to="/about-us" className={getTextClass()} onClick={handleCloseOffcanvas}>{t("about_us")}</Nav.Link>
+      <Nav.Link as={Link} to="/contact" className={getTextClass()} onClick={handleCloseOffcanvas}>{t("contact")}</Nav.Link>
+    </>
+  );
 
   return (
-    <header className={getFontClass()}>
-      {/* Top Bar - Desktop Only */}
-      <div className="bg-dark text-white py-2 d-none d-lg-block">
-        <Container>
-          <div className="d-flex justify-content-between align-items-center">
-            <div>
-              <small className={getTextClass()}>{t('free_shipping')}</small>
-            </div>
-            <div className="text-center">
-              <small className={`me-3 ${getTextClass()}`}>+855 962 089 546</small>
-              <small className={getTextClass()}>fashionzaro@gmail.com</small>
-            </div>
-            <div>
-              <Dropdown>
-                <Dropdown.Toggle
-                  variant="secondary"
-                  size="sm"
-                  id="dropdown-language"
-                  className={getTextClass()}
-                >
-                  {language === 'en' ? 'EN' : 'ខ្មែរ'}
-                </Dropdown.Toggle>
-                <Dropdown.Menu>
-                  <Dropdown.Item
-                    onClick={() => setLanguage('en')}
-                    active={language === 'en'}
-                    className="english-text"
-                  >
-                    EN
-                  </Dropdown.Item>
-                  <Dropdown.Item
-                    onClick={() => setLanguage('km')}
-                    active={language === 'km'}
-                    className="khmer-text"
-                  >
-                    ខ្មែរ
-                  </Dropdown.Item>
-                </Dropdown.Menu>
-              </Dropdown>
-            </div>
+    <header
+      className={`fixed-top w-100 ${getFontClass()}`}
+      style={{
+        zIndex: 1030,
+        transition: "all 0.4s ease",
+        backgroundColor: scrolled ? "rgba(255,255,255,0.98)" : "white",
+        boxShadow: scrolled ? "0 2px 10px rgba(0,0,0,0.1)" : "none",
+        backdropFilter: scrolled ? "blur(6px)" : "none",
+      }}
+    >
+      {/* 🔹 Top Bar */}
+      <div
+        className="bg-dark text-white py-1 text-center text-md-start"
+        style={{
+          fontSize: "0.8rem",
+          transition: "0.3s ease",
+        }}
+      >
+        <Container fluid className="px-3 px-md-5 d-flex flex-column flex-md-row justify-content-between align-items-center gap-1">
+          <div>
+            {t("free_shipping")}
+            <span className="d-none d-md-inline ms-3">
+              · +855 962 089 546 · fashionzaro@gmail.com
+            </span>
           </div>
+
+          <div className="d-flex align-items-center gap-2 d-md-none">
+            <span>+855 962 089 546</span>
+            <span className="d-block">|</span>
+            <span>fashionzaro@gmail.com</span>
+          </div>
+
+          <Dropdown>
+            <Dropdown.Toggle
+              variant="danger"
+              size="sm"
+              id="dropdown-language"
+              className="rounded-1 px-2 py-1"
+            >
+              {language === "en" ? "EN" : "ខ្មែរ"}
+            </Dropdown.Toggle>
+            <Dropdown.Menu>
+              <Dropdown.Item
+                onClick={() => setLanguage("en")}
+                active={language === "en"}
+                className="english-text"
+              >
+                EN
+              </Dropdown.Item>
+              <Dropdown.Item
+                onClick={() => setLanguage("km")}
+                active={language === "km"}
+                className="khmer-text"
+                // 💡 Corrected line: content is inside the tag, not floating outside
+              >
+                ខ្មែរ
+              </Dropdown.Item>
+            </Dropdown.Menu>
+          </Dropdown>
         </Container>
       </div>
 
-      {/* Main Navbar */}
-      <Navbar bg="white" className="shadow-sm py-2" sticky="top">
-        <Container>
-          {/* Mobile Menu Button */}
-          <Button 
-            variant="outline-dark" 
-            className="d-lg-none me-2"
-            onClick={handleShow}
-          >
-            <FaBars />
-          </Button>
-
-          {/* Logo */}
-          <Navbar.Brand as={Link} to="/" className={`fw-bold fs-4 ${getTextClass()}`}>
-            <img 
-              src={logo} 
-              alt="logo" 
-              style={{ width: 35, height: 35, objectFit: 'cover' }} 
-              className="me-2" 
+      {/* 🔹 Main Navbar */}
+      <Navbar bg="transparent" className="py-2">
+        <Container fluid className="px-3 px-md-5">
+          {/* Logo/Brand */}
+          <Navbar.Brand as={Link} to="/" className={`fw-bold fs-5 ${getTextClass()}`}>
+            <img
+              src={logo}
+              alt="logo"
+              style={{ width: 40, height: 40, borderRadius: "50%" }}
+              className="me-2"
             />
             ZARO
           </Navbar.Brand>
 
-          {/* Desktop Navigation */}
-          <Nav className="mx-auto d-none d-lg-flex">
-            <Nav.Link
-              as={Link}
-              to="/"
-              className={`px-3 ${location.pathname === "/" ? "fw-bold text-primary" : ""} ${getTextClass()}`}
-            >
-              {t('home')}
-            </Nav.Link>
+          {/* 💡 Always visible Icons (Mobile & Desktop) */}
+          <div className="d-flex align-items-center gap-3 order-lg-3">
+            {/* Account Icon (hidden on mobile, added to Offcanvas body) */}
+            <Link to="/account" className="text-dark d-none d-lg-block">
+              <FaUser size={18} />
+            </Link>
 
-            <NavDropdown 
-              title={<span className={getTextClass()}>{t('products')}</span>}
-              id="products-dropdown"
-            >
-              <NavDropdown.Item as={Link} to="/products" className={getTextClass()}>
-                {t('all_products')}
-              </NavDropdown.Item>
-              <NavDropdown.Divider />
-              <NavDropdown.Item as={Link} to="/men" className={getTextClass()}>
-                {t('men')}
-              </NavDropdown.Item>
-              <NavDropdown.Item as={Link} to="/women" className={getTextClass()}>
-                {t('women')}
-              </NavDropdown.Item>
-              <NavDropdown.Item as={Link} to="/boys" className={getTextClass()}>
-                {t('boys')}
-              </NavDropdown.Item>
-              <NavDropdown.Item as={Link} to="/girls" className={getTextClass()}>
-                {t('girls')}
-              </NavDropdown.Item>
-            </NavDropdown>
+            {/* Wishlist Icon */}
+            <Link to="/wishlist" className="position-relative text-dark">
+              <FaHeart size={18} />
+              <Badge bg="danger" pill className="position-absolute top-0 start-100 translate-middle">
+                {wishlistCount}
+              </Badge>
+            </Link>
 
-            <NavDropdown 
-              title={<span className={getTextClass()}>{t('collections')}</span>}
-              id="collections-dropdown"
-            >
-              <NavDropdown.Item as={Link} to="/popular" className={getTextClass()}>
-                {t('popular_products')}
-              </NavDropdown.Item>
-              <NavDropdown.Item as={Link} to="/special" className={getTextClass()}>
-                {t('special_products')}
-              </NavDropdown.Item>
-              <NavDropdown.Item as={Link} to="/best" className={getTextClass()}>
-                {t('best_sellers')}
-              </NavDropdown.Item>
-            </NavDropdown>
-
-            <Nav.Link as={Link} to="/discounts" className={`px-3 ${getTextClass()}`}>
-              {t('sale')}
-            </Nav.Link>
-
-            <Nav.Link as={Link} to="/about-us" className={`px-3 ${getTextClass()}`}>
-              {t('about_us')}
-            </Nav.Link>
-
-            <Nav.Link as={Link} to="/contact" className={`px-3 ${getTextClass()}`}>
-              {t('contact')}
-            </Nav.Link>
-          </Nav>
-
-          {/* Right Side Icons */}
-          <div className="d-flex align-items-center gap-2">
-            {/* Language Selector - Mobile & Desktop */}
-            <Dropdown>
-              <Dropdown.Toggle
-                variant="outline-secondary"
-                size="sm"
-                id="dropdown-lang"
-                className={getTextClass()}
-              >
-                {language === 'en' ? 'EN' : 'ខ្មែរ'}
-              </Dropdown.Toggle>
-              <Dropdown.Menu>
-                <Dropdown.Item
-                  onClick={() => setLanguage('en')}
-                  active={language === 'en'}
-                  className="english-text"
-                >
-                  EN
-                </Dropdown.Item>
-                <Dropdown.Item
-                  onClick={() => setLanguage('km')}
-                  active={language === 'km'}
-                  className="khmer-text"
-                >
-                  ខ្មែរ
-                </Dropdown.Item>
-              </Dropdown.Menu>
-            </Dropdown>
-
-            {/* Search - Desktop Only */}
-            <Form className="d-none d-lg-flex">
-              <Form.Control
-                type="search"
-                placeholder={t('search')}
-                className={`me-2 ${getTextClass()}`}
-                size="sm"
-                style={{ width: '180px' }}
-              />
-              <Button variant="outline-dark" size="sm">
-                <FaSearch />
-              </Button>
-            </Form>
-
-            {/* User Account */}
-            <Link to="/account" className="btn btn-outline-dark btn-sm">
-              <FaUser />
+            {/* Cart Icon */}
+            <Link to="/cart" className="position-relative text-dark">
+              <FaShoppingCart size={18} />
+              <Badge bg="danger" pill className="position-absolute top-0 start-100 translate-middle">
+                {cartCount}
+              </Badge>
             </Link>
           </div>
+          
+          {/* 💡 Desktop Navigation Links */}
+          <Nav className="mx-auto d-none d-lg-flex order-lg-2">
+             <NavLinks />
+          </Nav>
+          
+          {/* 💡 Mobile Offcanvas Toggle (Hamburger) */}
+          <Button
+            variant="light"
+            onClick={handleShowOffcanvas}
+            className="d-lg-none border-0 p-2"
+            aria-controls="offcanvasNavbar"
+          >
+            <FaBars size={20} />
+          </Button>
+
         </Container>
       </Navbar>
 
-      {/* Mobile Offcanvas Menu */}
-      <Offcanvas show={show} onHide={handleClose} placement="start">
-        <Offcanvas.Header closeButton>
-          <Offcanvas.Title className={getTextClass()}>
-            <img 
-              src={logo} 
-              alt="logo" 
-              style={{ width: 30, height: 30, objectFit: 'cover' }} 
-              className="me-2" 
-            />
-            Menu
+      {/* 🔹 Offcanvas Side Menu (Mobile Only) */}
+      <Offcanvas 
+        show={showOffcanvas} 
+        onHide={handleCloseOffcanvas} 
+        placement="start" // Slide in from the left
+        className={getFontClass()}
+      >
+        <Offcanvas.Header closeButton> {/* 💡 The required Exit/Close Button */}
+          <Offcanvas.Title className={`fw-bold fs-5 ${getTextClass()}`}>
+            ZARO Menu
           </Offcanvas.Title>
         </Offcanvas.Header>
         <Offcanvas.Body>
-          {/* Mobile Search */}
-          <Form className="mb-3">
-            <Form.Control
-              type="search"
-              placeholder={t('search')}
-              className={getTextClass()}
-            />
-          </Form>
+            {/* Mobile Search Form in Offcanvas */}
+            <Form className="d-flex mb-4">
+              <Form.Control
+                  type="search"
+                  placeholder={t('search')}
+                  className={`me-2 ${getTextClass()}`}
+                  aria-label="Search"
+                />
+                <Button variant="outline-dark">
+                  <FaSearch />
+                </Button>
+            </Form>
 
-          {/* Mobile Navigation Links */}
-          <Nav className="flex-column">
-            <Nav.Link
-              as={Link}
-              to="/"
-              onClick={handleClose}
-              className={`py-2 ${location.pathname === "/" ? "fw-bold text-primary" : ""} ${getTextClass()}`}
-            >
-              {t('home')}
-            </Nav.Link>
-
-            <hr />
-
-            <div className={`fw-bold mb-2 ${getTextClass()}`}>{t('products')}</div>
-            <Nav.Link as={Link} to="/products" onClick={handleClose} className={`ps-3 py-2 ${getTextClass()}`}>
-              {t('all_products')}
-            </Nav.Link>
-            <Nav.Link as={Link} to="/men" onClick={handleClose} className={`ps-3 py-2 ${getTextClass()}`}>
-              {t('men')}
-            </Nav.Link>
-            <Nav.Link as={Link} to="/women" onClick={handleClose} className={`ps-3 py-2 ${getTextClass()}`}>
-              {t('women')}
-            </Nav.Link>
-            <Nav.Link as={Link} to="/boys" onClick={handleClose} className={`ps-3 py-2 ${getTextClass()}`}>
-              {t('boys')}
-            </Nav.Link>
-            <Nav.Link as={Link} to="/girls" onClick={handleClose} className={`ps-3 py-2 ${getTextClass()}`}>
-              {t('girls')}
+            {/* Navigation Links inside the Side Menu */}
+            <Nav className="flex-column">
+                <NavLinks />
+            </Nav>
+            
+            <hr className="my-3"/>
+            
+            {/* Mobile Account Link inside Offcanvas */}
+            <Nav.Link as={Link} to="/account" className={`text-dark ${getTextClass()}`} onClick={handleCloseOffcanvas}>
+                <FaUser className="me-2"/> {t('account')}
             </Nav.Link>
 
-            <hr />
-
-            <div className={`fw-bold mb-2 ${getTextClass()}`}>{t('collections')}</div>
-            <Nav.Link as={Link} to="/popular" onClick={handleClose} className={`ps-3 py-2 ${getTextClass()}`}>
-              {t('popular_products')}
-            </Nav.Link>
-            <Nav.Link as={Link} to="/special" onClick={handleClose} className={`ps-3 py-2 ${getTextClass()}`}>
-              {t('special_products')}
-            </Nav.Link>
-            <Nav.Link as={Link} to="/best" onClick={handleClose} className={`ps-3 py-2 ${getTextClass()}`}>
-              {t('best_sellers')}
-            </Nav.Link>
-
-            <hr />
-
-            <Nav.Link as={Link} to="/discounts" onClick={handleClose} className={`py-2 ${getTextClass()}`}>
-              {t('sale')}
-            </Nav.Link>
-            <Nav.Link as={Link} to="/about-us" onClick={handleClose} className={`py-2 ${getTextClass()}`}>
-              {t('about_us')}
-            </Nav.Link>
-            <Nav.Link as={Link} to="/contact" onClick={handleClose} className={`py-2 ${getTextClass()}`}>
-              {t('contact')}
-            </Nav.Link>
-          </Nav>
         </Offcanvas.Body>
       </Offcanvas>
+
     </header>
   );
 };
