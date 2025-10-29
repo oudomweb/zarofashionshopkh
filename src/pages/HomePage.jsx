@@ -48,7 +48,7 @@ const HomePage = () => {
   return (
     <div>
       <Silder />
-      <section className="py-5">
+      {/* <section className="py-5">
         <Container>
           <Row>
             {features.map((feature, index) => (
@@ -66,7 +66,7 @@ const HomePage = () => {
             ))}
           </Row>
         </Container>
-      </section>
+      </section> */}
 
       <CategorySection />
       <FeaturedProducts />

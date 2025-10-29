@@ -65,11 +65,11 @@ const ProductDetail = () => {
         alert("Product added to cart!")
     }
 
-    const handleAddToWishlist = () => {
-        // Add to wishlist logic
-        console.log("Added to wishlist:", product)
-        alert("Product added to wishlist!")
-    }
+    // const handleAddToWishlist = () => {
+    //     // Add to wishlist logic
+    //     console.log("Added to wishlist:", product)
+    //     alert("Product added to wishlist!")
+    // }
 
     if (loading) {
         return (
@@ -230,14 +230,14 @@ const ProductDetail = () => {
                             >
                                 <FaShoppingCart className="me-2" /> {t('add_to_cart')}
                             </Button>
-                            <Button
+                            {/* <Button
                                 variant="outline-secondary"
                                 size="lg"
                                 className="d-flex align-items-center"
                                 onClick={handleAddToWishlist}
                             >
                                 <FaHeart className="me-2" /> {t('favorite')}
-                            </Button>
+                            </Button> */}
                         </div>
 
                         <div className="mb-4 pb-4 border-bottom">
@@ -368,3 +368,226 @@ const ProductDetail = () => {
 }
 
 export default ProductDetail
+
+
+
+
+// // ProductDetail.jsx
+// import React, { useState, useEffect } from 'react';
+// import { useParams } from 'react-router-dom'; // Assuming you use react-router-dom for useParams
+
+// // --- MOCK HOOKS AND DATA ---
+// // NOTE: In a real application, you would import these from their actual files/libraries.
+
+// // Mock data for a product
+// const mockProducts = [
+//     {
+//         id: '123',
+//         name: 'Classic Tee',
+//         price: 29.99,
+//         sku: 'CT-GRY-L',
+//         colors: ['Red', 'Blue', 'Grey'],
+//         sizes: ['S', 'M', 'L', 'XL'],
+//         description: 'A comfortable classic t-shirt.'
+//     }
+// ];
+
+// // Mock useTranslation hook for i18n
+// const useTranslation = () => ({
+//     language: 'en',
+//     setLanguage: () => {},
+//     t: (key) => {
+//         // Simple mock: if it's a product name, return it; otherwise, handle simple keys.
+//         const translations = {
+//             'N/A': 'N/A',
+//             'Classic Tee': 'Classic Tee',
+//             'S': 'Small',
+//             'M': 'Medium',
+//             'L': 'Large',
+//             'XL': 'Extra Large',
+//         };
+//         return translations[key] || key;
+//     }
+// });
+
+// // Mock for an error page (in a real app, this would be a separate component/logic)
+// const ErrorPage = () => <div>Product Not Found!</div>;
+
+// // --- ACTUAL COMPONENT CODE STARTS HERE ---
+
+// // 1. ADD YOUR TELEGRAM INFO HERE
+// // !!! WARNING: This token will be visible in the browser's source code.
+// const TELEGRAM_BOT_TOKEN = "8485765174:AAEM6dbOk4rByh8DJcd_5AtBT0bpIPhOhoU";
+// const TELEGRAM_CHAT_ID = "1200612758"; // Target user/group/channel ID
+
+// const ProductDetail = () => {
+//     // State and hooks
+//     const { id } = useParams()
+//     const [product, setProduct] = useState(null)
+//     const [quantity, setQuantity] = useState(1);
+//     const [selectedColor, setSelectedColor] = useState(null);
+//     const [selectedSize, setSelectedSize] = useState(null);
+//     const { language, setLanguage, t } = useTranslation();
+    
+//     // Fetch product details on component mount or ID change
+//     useEffect(() => {
+//         // Mocking an async fetch
+//         const fetchedProduct = mockProducts.find(p => p.id === id);
+//         setProduct(fetchedProduct);
+//         if (fetchedProduct) {
+//             setSelectedColor(fetchedProduct.colors[0]); // Select first color by default
+//             setSelectedSize(fetchedProduct.sizes[0]); // Select first size by default
+//         }
+//     }, [id]);
+
+//     const handleAddToCart = async () => {
+//         if (!product) {
+//             alert("Product data is missing!");
+//             return;
+//         }
+
+//         // Prepare product details for the message
+//         const orderDetails = {
+//             name: t(product.name),
+//             id: product.id,
+//             price: product.price,
+//             sku: product.sku,
+//             quantity: quantity,
+//             color: selectedColor || t('N/A'),
+//             size: selectedSize || t('N/A'),
+//             link: window.location.href // The current URL is helpful
+//         };
+
+//         // Escaping special characters for MarkdownV2, except the ones used for formatting (like *, [, ], (, ))
+//         // Per Telegram API docs, the following need to be escaped:
+//         // _, *, [, ], (, ), ~, `, >, #, +, -, =, |, {, }, ., !
+//         const escapeMarkdownV2 = (text) => text.replace(/([\_*\[\]()~`>#+\-={}.!])/g, '\\$1');
+        
+//         const escapedLink = escapeMarkdownV2(orderDetails.link);
+//         const escapedName = escapeMarkdownV2(orderDetails.name);
+//         const escapedSku = escapeMarkdownV2(orderDetails.sku);
+//         const escapedColor = escapeMarkdownV2(orderDetails.color);
+//         const escapedSize = escapeMarkdownV2(orderDetails.size);
+//         const escapedTotalPrice = (orderDetails.price * orderDetails.quantity).toFixed(2);
+
+
+//         // Construct the message text (using MarkdownV2 for better look)
+//         const messageText = `*🚨 New Order Alert 🚨*\n\n` +
+//             `*Product:* ${escapedName}\n` +
+//             `*SKU:* ${escapedSku}\n` +
+//             `*Quantity:* ${orderDetails.quantity}\n` +
+//             `*Color:* ${escapedColor}\n` +
+//             `*Size:* ${escapedSize}\n` +
+//             `*Total Price:* $${escapedTotalPrice}\n\n` +
+//             `*Product Link:* [View Product](${escapedLink})`;
+
+//         // Telegram Bot API URL
+//         const telegramApiUrl = `https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage`;
+
+//         // Check if token and chat ID are set
+//         if (TELEGRAM_BOT_TOKEN === "YOUR_BOT_TOKEN" || TELEGRAM_CHAT_ID === "YOUR_CHAT_ID") {
+//             alert("Please configure TELEGRAM_BOT_TOKEN and TELEGRAM_CHAT_ID first!");
+//             console.error("Telegram credentials not configured.");
+//             return;
+//         }
+
+//         try {
+//             const response = await fetch(telegramApiUrl, {
+//                 method: 'POST',
+//                 headers: {
+//                     'Content-Type': 'application/json',
+//                 },
+//                 body: JSON.stringify({
+//                     chat_id: TELEGRAM_CHAT_ID,
+//                     text: messageText,
+//                     parse_mode: 'MarkdownV2'
+//                 }),
+//             });
+
+//             if (response.ok) {
+//                 console.log("Order sent to Telegram:", orderDetails);
+//                 // Update the user-facing alert
+//                 alert(`Order for ${orderDetails.name} (Qty: ${orderDetails.quantity}) has been placed!`);
+//             } else {
+//                 const errorData = await response.json();
+//                 console.error("Failed to send order to Telegram:", errorData);
+//                 alert(`Order failed! Please check console for details. Telegram Error: ${errorData.description || 'Unknown'}`);
+//             }
+//         } catch (error) {
+//             console.error("Network error while sending order:", error);
+//             alert("Order failed due to a network error!");
+//         }
+
+//         // Original console log can remain or be removed
+//         console.log("Added to cart (Order attempt):", orderDetails);
+//     };
+    
+//     if (!product) {
+//         if (id) return <div>Loading product...</div>;
+//         return <ErrorPage />;
+//     }
+
+//     // --- Component JSX (Simplified) ---
+//     return (
+//         <div className="product-detail">
+//             <h1>{t(product.name)}</h1>
+//             <p>{product.description}</p>
+//             <h2>${product.price.toFixed(2)}</h2>
+
+//             {/* Color Selection */}
+//             <div>
+//                 <label>Color:</label>
+//                 {product.colors.map(color => (
+//                     <button 
+//                         key={color} 
+//                         style={{border: selectedColor === color ? '2px solid black' : '1px solid grey'}}
+//                         onClick={() => setSelectedColor(color)}
+//                     >
+//                         {color}
+//                     </button>
+//                 ))}
+//             </div>
+
+//             {/* Size Selection */}
+//             <div>
+//                 <label>Size:</label>
+//                 {product.sizes.map(size => (
+//                     <button 
+//                         key={size} 
+//                         style={{border: selectedSize === size ? '2px solid black' : '1px solid grey'}}
+//                         onClick={() => setSelectedSize(size)}
+//                     >
+//                         {t(size)}
+//                     </button>
+//                 ))}
+//             </div>
+
+//             {/* Quantity Control */}
+//             <div>
+//                 <label>Quantity:</label>
+//                 <input 
+//                     type="number" 
+//                     min="1" 
+//                     value={quantity} 
+//                     onChange={(e) => setQuantity(Number(e.target.value))} 
+//                     style={{width: '50px', margin: '0 10px'}}
+//                 />
+//             </div>
+
+//             {/* Add to Cart Button */}
+//             <button 
+//                 onClick={handleAddToCart} 
+//                 disabled={!selectedColor || !selectedSize || quantity < 1}
+//                 style={{padding: '10px 20px', marginTop: '20px', cursor: 'pointer'}}
+//             >
+//                 Place Order (via Telegram)
+//             </button>
+            
+//             <p style={{fontSize: 'small', color: 'red', marginTop: '10px'}}>
+//                 **WARNING:** This is NOT a real e-commerce checkout. It sends an unauthenticated alert to Telegram.
+//             </p>
+//         </div>
+//     );
+// }
+
+// export default ProductDetail;
